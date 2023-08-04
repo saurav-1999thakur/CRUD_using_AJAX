@@ -68,6 +68,9 @@
             <button name="submit" type="submit" class="btn btn-primary btn-block mb-4">Submit</button>
           </div>
           </form>
+             <div class="form-outline mb-4">
+            <button type="btn" class="btn btn-primary btn-block mb-4">list.php</button>
+          </div>
         </div>
       </div>
     <script type="text/javascript">
