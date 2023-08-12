@@ -73,26 +73,43 @@
           </div>
         </div>
       </div>
-    <script type="text/javascript">
+   <script type="text/javascript">
       $(document).ready(function(){
         $("#ajaxForm").submit(function(e){
+          // alert("oops");
           e.preventDefault();
+          var fd = new FormData();
+          var fileName = $('#file')[0];
+          var name = $('#name').val();
+          var email = $('#email').val();
+          var contact = $('#contact').val();
+          var company = $('#company').val();
+          var address = $('#address').val();
+          fd.append('file',fileName.files[0]);
+          fd.append('name',name);
+          fd.append('email',email);
+          fd.append('contact',contact);
+          fd.append('company',company);
+          fd.append('address',address);
           $.ajax({
             type:'POST',
             url:'insert.php',
-            data:$(this).serialize(),
+            data:fd,
+            contentType: false,
+            processData: false,
+            // data:$(this).serialize(),
             success:function(data){
-              // alert("oops");
+              // alert(data);
+              // console.log(data);
               if(data=="success"){
-                swal({title: "Thankyou!",text: "Submitted! successfully",icon: "success"}).then(function() {window.location ="listing.php";});
+                swal({title: "Thankyou!",text: "Submitted! successfully",icon: "success"}).then(function() {window.location ="list.php";});
               }else{
                 swal({title: "sorry!",text: "Not Submitted!",icon: "error"}).then(function() {window.location ="index.php";});
               }
             }
           });
+
         });
-
-
       });
     
     </script>
