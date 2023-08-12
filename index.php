@@ -20,7 +20,7 @@
           <div class="row mb-4">
           <div class="col">
             <div class="form-outline">
-              <input type="text" id="form6Example1" name="name" class="form-control" />
+              <input type="text" id="name" name="name" class="form-control" />
               <span style="color:red">*</span>
               <label class="form-label" for="form6Example1">Name</label>
             </div>
@@ -35,19 +35,19 @@
         <div class="row mb-4">
           <div class="col">
             <div class="form-outline">
-              <input type="number" id="form6Example2" name="contact" class="form-control" />
+              <input type="number" id="contact" name="contact" class="form-control" />
               <label class="form-label" for="form6Example2">Contact</label>
             </div>
           </div>
           <div class="col">
             <div class="form-outline">
-              <input type="email" id="form6Example2" name="email" class="form-control" />
+              <input type="email" id="email" name="email" class="form-control" />
               <label class="form-label" for="form6Example2">Email</label>
             </div>
           </div>
           <div class="col">
             <div class="form-outline">
-            <select name="company" class="form-control">
+            <select name="company" id="company" class="form-control">
             <option>select Company</option>
             <option>Google</option>
             <option>Genpact</option>
@@ -60,7 +60,7 @@
         </div>
         <div class="col">
             <div class="form-outline">
-              <textarea name="address" class="form-control" id="exampleFormControlTextarea1" cols="30" rows="3"></textarea>
+              <textarea name="address" class="form-control" id="address" cols="30" rows="3"></textarea>
               <label class="exampleFormControlTextarea1" for="form6Example2">Address</label>
             </div>
           </div>
